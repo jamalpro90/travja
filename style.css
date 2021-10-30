@@ -185,6 +185,31 @@ body {
   }
 }
 
+/* Gallery */
+.img-container {
+  width: max-content;
+}
+
+.gallery-content img {
+  width: 200px;
+  margin: -3px;
+}
+
+@media (max-width: 500px) {
+  .gallery-content img {
+    width: 34vw;
+  }
+  .img-container {
+    border: 1px solid red;
+  }
+}
+
+@media (max-width: 320px) {
+  .gallery-content img {
+    width: 50vw;
+  }
+}
+
 /* Another */
 .section-title {
   font-family: 'Bitter', serif;
