@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --background-color: rgb(255, 240, 231);
+  --color1: rgb(94, 45, 45);
+  --color2: rgb(255, 234, 209);
+}
 
 * {
   margin: 0;
@@ -7,7 +13,7 @@
 
 body {
   height: 300vh;
-  background-color: bisque;
+  background-color: var(--background-color);
 }
 
 /* Navbar */
@@ -69,14 +75,6 @@ body {
 .caro-container {
   padding: 3rem 0;
 }
-.caro-title {
-  font-family: 'Bitter', serif;
-  font-weight: 600;
-}
-
-.caro-desc {
-  font-size: 1rem;
-}
 
 .carousel {
   width: 75vw;
@@ -86,5 +84,64 @@ body {
 @media (max-width: 500px) {
   .carousel {
     width: 100%;
+  }
+}
+
+/* Special Offers */
+.special-container {
+  padding: 1rem 0;
+}
+
+.card-container {
+  width: max-content;
+  height: 400px;
+  overflow-x: auto;
+  position: relative;
+}
+
+.card {
+  background-color: var(--color2);
+  width: 100px;
+}
+
+.card .card-body .star-container {
+  margin-bottom: 10px;
+}
+.card .card-body .star-container > * {
+  color: gold;
+}
+
+.card-bottom-container button {
+  background-color: var(--color1);
+  border-radius: 30px;
+}
+
+.card-bottom-container .price {
+  font-size: 1.4rem;
+  color: var(--color1);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+/* Another */
+.section-title {
+  font-family: 'Bitter', serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--color1);
+}
+
+.section-desc {
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-desc {
+    font-size: 0.85rem;
   }
 }
