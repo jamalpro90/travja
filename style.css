@@ -123,6 +123,68 @@ body {
   letter-spacing: -1px;
 }
 
+/* Blog */
+.blog-content .blog {
+  margin: 0.5rem 0;
+}
+.blog-content .blog-content-desc {
+  padding: 0 8px;
+}
+
+.blog-content .blog img {
+  width: 200px;
+  border-radius: 5px;
+}
+
+.blog-content .blog h5 {
+  font-family: 'Bitter', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+@media (max-width: 500px) {
+  .blog-content .blog h5 {
+    font-size: 1.1rem;
+  }
+  .blog-content .blog img {
+    width: 150px;
+  }
+}
+
+.blog-content .blog p {
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 400px) {
+  .blog {
+    flex-direction: column;
+  }
+  .blog-content .blog h5 {
+    margin-top: 10px;
+  }
+  .blog-content .blog-content-desc {
+    padding: 0;
+  }
+}
+
+/* khusus blog besar */
+@media (min-width: 992px) {
+  .blog-content .blog.main {
+    flex-direction: column;
+  }
+  .blog-content .blog.main .blog-content-desc {
+    padding: 0;
+  }
+  .blog-content .blog.main img {
+    width: 100%;
+  }
+  .blog-content .blog.main h5 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+}
+
 /* Another */
 .section-title {
   font-family: 'Bitter', serif;
