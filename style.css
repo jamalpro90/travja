@@ -26,10 +26,6 @@ body {
   transition: 0.5s;
 }
 
-.navbar .navbar-brand {
-  text-shadow: 2px 2px 5px black;
-}
-
 .navbar .navbar-nav li a {
   font-size: 1.3rem;
   font-weight: 500;
@@ -76,12 +72,12 @@ body {
   position: absolute;
 }
 
-.hero .hero-content button {
+.hero .hero-content a {
   color: white;
   transition: 0.2s;
 }
 
-.hero .hero-content button:hover {
+.hero .hero-content a:hover {
   color: black;
   background-color: white;
 }
