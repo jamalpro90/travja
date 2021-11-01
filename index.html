@@ -13,7 +13,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed start-0 end-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-fixed start-0 end-0">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#">TRAVEL</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,16 +22,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item me-5">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link" href="#">Explore</a>
+              <a class="nav-link" href="#popular">Explore</a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link" href="#">Travel</a>
+              <a class="nav-link" href="#special">Travel</a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="#gallery">Gallery</a>
             </li>
           </ul>
         </div>
@@ -40,7 +43,7 @@
     <!-- End Navbar -->
 
     <!-- Hero -->
-    <div class="hero vh-100 border border-2 border-danger d-flex justify-content-center">
+    <div id="home" class="hero vh-100 d-flex justify-content-center">
       <div class="video-bg">
         <video src="./video-background.mp4" width="320" height="240" loop muted autoplay></video>
       </div>
@@ -53,7 +56,7 @@
     <!-- End Hero -->
 
     <!-- Carousel Popular Destination -->
-    <div class="caro-container border border-3 border-primary">
+    <div id="popular" class="caro-container border-primary">
       <h2 class="section-title">Popular Destination</h2>
       <p class="section-desc">From historical buildings, mountains and enchanting nature, come and see the beauty of this world.</p>
       <div id="carouselExampleCaptions" class="carousel slide mx-auto mt-4" data-bs-ride="carousel">
@@ -64,24 +67,24 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://images.unsplash.com/photo-1506462945848-ac8ea6f609cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1172&q=80" class="d-block w-100" alt="..." />
+            <img src="./img/caro-1.jpg" class="d-block overflow-hidden" alt="Tajmahal" />
             <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
+              <h5>Tajmahal</h5>
+              <p>Historical Islamic building, and is one of the 7 wonders of the world.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1174&q=80" class="d-block w-100" alt="..." />
+            <img src="./img/caro-2.jpg" class="d-block" alt="Mountain" />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
+              <h5>The Great Mountain</h5>
+              <p>Refreshing atmosphere and wide and beautiful scenery.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" class="d-block w-100" alt="..." />
+            <img src="./img/caro-3.jpg" class="d-block" alt="Beach" />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
+              <h5>Tropical Island</h5>
+              <p>Enjoy a relaxing time for a while on this amazing island.</p>
             </div>
           </div>
         </div>
@@ -98,72 +101,72 @@
     <!-- End Carousel Popular Destination -->
 
     <!-- Special Offers -->
-    <div class="special-offers-container py-3 border border-3 border-success">
+    <div id="special" class="special-offers-container">
       <div class="special-header">
         <h2 class="section-title">Special Offers</h2>
         <p class="section-desc">Check out our special offers tour</p>
       </div>
       <div class="container special-container overflow-auto">
         <!-- Card Container -->
-        <div class="card-container">
-          <div class="card d-inline-block mt-3 me-3" style="width: 18rem">
-            <img src="https://images.unsplash.com/photo-1601399681546-ff2983a355c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1174&q=80" class="card-img-top" alt="tour image" />
+        <div class="card-container d-inline-flex">
+          <div class="card">
+            <img src="./img/special-1.jpg" class="card-img-top w-100" alt="card image" />
             <div class="card-body">
-              <h5 class="card-title text-black fw-bolder fs-5">Tajmahal</h5>
-              <div class="star-container">
+              <h5 class="card-title">Tajmahal, India</h5>
+              <p class="card-text star-container">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
-              </div>
-              <div class="card-bottom-container d-flex justify-content-between">
-                <button class="h-50 px-4 btn text-white">Detail</button>
-                <div class="d-flex align-items-center">
-                  <p>from</p>
-                  <p class="price">$500</p>
-                </div>
-              </div>
+              </p>
+              <button class="btn">Details</button>
+              <p class="price">from<span>$500</span></p>
             </div>
           </div>
-          <div class="card d-inline-block mt-3 me-3" style="width: 18rem">
-            <img src="https://images.unsplash.com/photo-1601399681546-ff2983a355c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1174&q=80" class="card-img-top" alt="tour image" />
+          <div class="card">
+            <img src="./img/special-2.jpg" class="card-img-top w-100" alt="card image" />
             <div class="card-body">
-              <h5 class="card-title text-black fw-bolder fs-5">Tajmahal</h5>
-              <div class="star-container">
+              <h5 class="card-title">Eiffel Tower, France</h5>
+              <p class="card-text star-container">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
-              </div>
-              <div class="card-bottom-container d-flex justify-content-between">
-                <button class="h-50 px-4 btn text-white">Detail</button>
-                <div class="d-flex align-items-center">
-                  <p>from</p>
-                  <p class="price">$500</p>
-                </div>
-              </div>
+              </p>
+              <button class="btn">Details</button>
+              <p class="price">from<span>$500</span></p>
             </div>
           </div>
-          <div class="card d-inline-block mt-3 me-3" style="width: 18rem">
-            <img src="https://images.unsplash.com/photo-1601399681546-ff2983a355c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1174&q=80" class="card-img-top" alt="tour image" />
+          <div class="card">
+            <img src="./img/special-3.jpg" class="card-img-top w-100" alt="card image" />
             <div class="card-body">
-              <h5 class="card-title text-black fw-bolder fs-5">Tajmahal</h5>
-              <div class="star-container">
+              <h5 class="card-title">Dayak Tribe, Indonesia</h5>
+              <p class="card-text star-container">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
-              </div>
-              <div class="card-bottom-container d-flex justify-content-between">
-                <button class="h-50 px-4 btn text-white">Detail</button>
-                <div class="d-flex align-items-center">
-                  <p>from</p>
-                  <p class="price">$500</p>
-                </div>
-              </div>
+              </p>
+              <button class="btn">Details</button>
+              <p class="price">from<span>$500</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./img/special-4.jpg" class="card-img-top w-100" alt="card image" />
+            <div class="card-body">
+              <h5 class="card-title">Canyon, Turkey</h5>
+              <p class="card-text star-container">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </p>
+              <button class="btn">Details</button>
+              <p class="price">from<span>$500</span></p>
             </div>
           </div>
         </div>
@@ -172,7 +175,7 @@
     <!-- End Special Offers -->
 
     <!-- Blog -->
-    <div class="blog-container py-3 pb-5 border border-3 border-info">
+    <div id="blog" class="blog-container">
       <div class="container">
         <!-- Blog Header -->
         <div class="blog-header">
@@ -180,38 +183,62 @@
           <p class="section-desc">Read insight into the world's amazing experiences</p>
         </div>
         <!-- Blog Content -->
-        <div class="blog-content border border-2 border-danger">
+        <div class="blog-content">
           <div class="row">
             <div class="col-12 col-lg-6">
               <div class="blog main d-flex">
-                <img src="https://images.unsplash.com/photo-1593980382071-e2e671cf66fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80" alt="blog image" />
+                <img src="./img/blog-1.jpg" alt="blog image" />
                 <div class="blog-content-desc">
-                  <h5>colorful night in the netherlands</h5>
-                  <p>The colorful weeds light up the night, and the beautiful stars in the sky</p>
+                  <h5>Enjoy a variety of culinary in the middle east</h5>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed qui ut doloribus! Quaerat exercitationem, hic voluptatibus ipsam totam quos sint!</p>
+                  <a
+                    >Read More
+                    <i class="fas fa-chevron-right one"></i>
+                    <i class="fas fa-chevron-right two"></i>
+                    <i class="fas fa-chevron-right three"></i
+                  ></a>
                 </div>
               </div>
             </div>
             <div class="col-lg-6">
               <!-- ke 2 -->
               <div class="blog d-flex">
-                <img src="https://images.unsplash.com/photo-1593980382071-e2e671cf66fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80" alt="blog image" />
+                <img src="./img/blog-2.jpg" alt="blog image" />
                 <div class="blog-content-desc">
-                  <h5>colorful night in the netherlands</h5>
-                  <p>The colorful weeds light up the night, and the beautiful stars in the sky</p>
+                  <h5>Adventure in an inland village</h5>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed qui ut doloribus! Quaerat exercitationem, hic voluptatibus ipsam totam quos sint!</p>
+                  <a
+                    >Read More
+                    <i class="fas fa-chevron-right one"></i>
+                    <i class="fas fa-chevron-right two"></i>
+                    <i class="fas fa-chevron-right three"></i
+                  ></a>
                 </div>
               </div>
               <div class="blog d-flex">
-                <img src="https://images.unsplash.com/photo-1593980382071-e2e671cf66fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80" alt="blog image" />
+                <img src="./img/blog-3.jpg" alt="blog image" />
                 <div class="blog-content-desc">
-                  <h5>colorful night in the netherlands</h5>
-                  <p>The colorful weeds light up the night, and the beautiful stars in the sky</p>
+                  <h5>The night is full of colors and the stars are shining bright</h5>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed qui ut doloribus! Quaerat exercitationem, hic voluptatibus ipsam totam quos sint!</p>
+                  <a
+                    >Read More
+                    <i class="fas fa-chevron-right one"></i>
+                    <i class="fas fa-chevron-right two"></i>
+                    <i class="fas fa-chevron-right three"></i
+                  ></a>
                 </div>
               </div>
               <div class="blog d-flex">
-                <img src="https://images.unsplash.com/photo-1593980382071-e2e671cf66fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80" alt="blog image" />
+                <img src="./img/blog-4.jpg" alt="blog image" />
                 <div class="blog-content-desc">
-                  <h5>colorful night in the netherlands</h5>
-                  <p>The colorful weeds light up the night, and the beautiful stars in the sky</p>
+                  <h5>Feel the cool atmosphere and the stunning lake</h5>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed qui ut doloribus! Quaerat exercitationem, hic voluptatibus ipsam totam quos sint!</p>
+                  <a
+                    >Read More
+                    <i class="fas fa-chevron-right one"></i>
+                    <i class="fas fa-chevron-right two"></i>
+                    <i class="fas fa-chevron-right three"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -222,7 +249,7 @@
     <!-- End Blog -->
 
     <!-- Gallery -->
-    <div class="gallery-container py-3 pb-5 border border-3 border-warning">
+    <div id="gallery" class="gallery-container">
       <div class="gallery-header">
         <h2 class="section-title">Gallery</h2>
         <p class="section-desc">Spectacular photo collection on our trip</p>
@@ -230,29 +257,37 @@
       <div class="gallery-content">
         <div class="w-100 overflow-auto">
           <div class="img-container overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1606054534744-a3b13e35c574?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=525&q=80" alt="trip image" />
-            <img src="https://images.unsplash.com/photo-1606054534744-a3b13e35c574?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=525&q=80" alt="trip image" />
-            <img src="https://images.unsplash.com/photo-1606054534744-a3b13e35c574?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=525&q=80" alt="trip image" />
-            <img src="https://images.unsplash.com/photo-1606054534744-a3b13e35c574?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=525&q=80" alt="trip image" />
-            <img src="https://images.unsplash.com/photo-1606054534744-a3b13e35c574?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=525&q=80" alt="trip image" />
-            <img src="https://images.unsplash.com/photo-1606054534744-a3b13e35c574?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=525&q=80" alt="trip image" />
-            <img src="https://images.unsplash.com/photo-1606054534744-a3b13e35c574?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=525&q=80" alt="trip image" />
+            <img src="./img/gallery-1.1.jpg" alt="trip image" />
+            <img src="./img/gallery-1.2.jpg" alt="trip image" />
+            <img src="./img/gallery-1.3.jpg" alt="trip image" />
+            <img src="./img/gallery-1.4.jpg" alt="trip image" />
+            <img src="./img/gallery-1.5.jpg" alt="trip image" />
+            <img src="./img/gallery-1.6.jpg" alt="trip image" />
+            <img src="./img/gallery-1.7.jpg" alt="trip image" />
+            <img src="./img/gallery-2.2.jpg" alt="trip image" />
           </div>
         </div>
         <div class="w-100 overflow-auto">
           <div class="img-container overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1565201847371-7232810d9957?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" alt="trip image" />
-            <img src="https://images.unsplash.com/photo-1565201847371-7232810d9957?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" alt="trip image" />
-            <img src="https://images.unsplash.com/photo-1565201847371-7232810d9957?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" alt="trip image" />
-            <img src="https://images.unsplash.com/photo-1565201847371-7232810d9957?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" alt="trip image" />
-            <img src="https://images.unsplash.com/photo-1565201847371-7232810d9957?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" alt="trip image" />
-            <img src="https://images.unsplash.com/photo-1565201847371-7232810d9957?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" alt="trip image" />
-            <img src="https://images.unsplash.com/photo-1565201847371-7232810d9957?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" alt="trip image" />
+            <img src="./img/gallery-2.1.jpg" alt="trip image" />
+            <img src="./img/gallery-2.2.jpg" alt="trip image" />
+            <img src="./img/gallery-2.3.jpg" alt="trip image" />
+            <img src="./img/gallery-2.4.jpg" alt="trip image" />
+            <img src="./img/gallery-2.5.jpg" alt="trip image" />
+            <img src="./img/gallery-2.6.jpg" alt="trip image" />
+            <img src="./img/gallery-2.7.jpg" alt="trip image" />
+            <img src="./img/gallery-1.3.jpg" alt="trip image" />
           </div>
         </div>
       </div>
     </div>
     <!-- Gallery -->
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center">
+      <p>Copyright &copy; 2021 TRAVEL</p>
+    </footer>
+    <!-- End Footer -->
 
     <!-- My Javascript -->
     <script src="script.js"></script>

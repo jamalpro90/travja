@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 300vh;
   background-color: var(--background-color);
@@ -19,10 +23,16 @@ body {
 /* Navbar */
 .navbar {
   z-index: 999;
+  transition: 0.4s;
 }
 
 .navbar .navbar-brand {
   text-shadow: 2px 2px 5px black;
+}
+
+.navbar .navbar-nav li a {
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 /* Hero */
@@ -42,6 +52,7 @@ body {
   left: 0;
   right: 0;
   z-index: -100;
+  filter: brightness(70%);
 }
 
 @media (max-width: 500px) {
@@ -73,12 +84,25 @@ body {
 
 /* Carousel */
 .caro-container {
-  padding: 3rem 0;
+  padding-top: 5rem;
 }
 
 .carousel {
-  width: 75vw;
+  width: 60vw;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.carousel-item img {
+  filter: brightness(80%);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  width: 97%;
+}
+
+.carousel-item h5 {
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 @media (max-width: 500px) {
@@ -88,8 +112,8 @@ body {
 }
 
 /* Special Offers */
-.special-container {
-  padding: 1rem 0;
+.special-offers-container {
+  padding-top: 5rem;
 }
 
 .card-container {
@@ -100,8 +124,18 @@ body {
 }
 
 .card {
-  background-color: var(--color2);
-  width: 100px;
+  background-color: var(--background-color);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  height: 330px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.card-body {
+  position: relative;
 }
 
 .card .card-body .star-container {
@@ -109,21 +143,64 @@ body {
 }
 .card .card-body .star-container > * {
   color: gold;
+  font-size: 0.8rem;
 }
 
-.card-bottom-container button {
+.card .card-body button {
   background-color: var(--color1);
   border-radius: 30px;
+  padding: 0 30px;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  margin-bottom: 10px;
+  border: 2px solid var(--color1);
+  color: white;
 }
 
-.card-bottom-container .price {
-  font-size: 1.4rem;
+.card .card-body button:hover {
+  background-color: var(--color2);
   color: var(--color1);
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.card .card-body .price {
+  position: absolute;
+  bottom: 9px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card .card-body .price span {
+  font-size: 1.5rem;
   letter-spacing: -1px;
+  font-weight: 700;
+  color: var(--color1);
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 250px;
+    height: 310px;
+  }
+  .card .card-body .price {
+    bottom: 18px;
+    font-size: 0.9rem;
+  }
+  .card .card-body .price span {
+    font-size: 1.3rem;
+    letter-spacing: -1px;
+    font-weight: 700;
+    color: var(--color1);
+  }
 }
 
 /* Blog */
+.blog-container {
+  padding-top: 5rem;
+}
+
 .blog-content .blog {
   margin: 0.5rem 0;
 }
@@ -142,6 +219,32 @@ body {
   font-weight: 700;
 }
 
+.blog-content .blog-content-desc p {
+  font-size: 0.8rem;
+  line-height: 1.3;
+  width: 80%;
+  height: 35px;
+  overflow: hidden;
+  margin: 0;
+  margin-bottom: 7px;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+}
+
+.blog-content .blog-content-desc a {
+  text-decoration: none;
+  color: orangered;
+  cursor: pointer;
+  font-weight: 600;
+}
+.blog-content .blog-content-desc a i {
+  transition: 0.5s;
+}
+
+.blog-content .blog-content-desc a:hover i {
+  transform: translateX(10px);
+}
+
 @media (max-width: 500px) {
   .blog-content .blog h5 {
     font-size: 1.1rem;
@@ -149,11 +252,12 @@ body {
   .blog-content .blog img {
     width: 150px;
   }
-}
-
-.blog-content .blog p {
-  font-size: 0.8rem;
-  line-height: 1.3;
+  .blog-content .blog-content-desc p {
+    width: 50vw;
+  }
+  .blog-content .blog-content-desc a {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 400px) {
@@ -165,6 +269,9 @@ body {
   }
   .blog-content .blog-content-desc {
     padding: 0;
+  }
+  .blog-content .blog-content-desc p {
+    width: 85vw;
   }
 }
 
@@ -186,6 +293,10 @@ body {
 }
 
 /* Gallery */
+.gallery-container {
+  padding-top: 5rem;
+}
+
 .img-container {
   width: max-content;
 }
@@ -199,14 +310,29 @@ body {
   .gallery-content img {
     width: 34vw;
   }
-  .img-container {
-    border: 1px solid red;
-  }
 }
 
 @media (max-width: 320px) {
   .gallery-content img {
-    width: 50vw;
+    width: 51vw;
+  }
+}
+
+/* Footer */
+footer {
+  margin-top: 5rem;
+}
+
+footer p {
+  color: white;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  footer p {
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
   }
 }
 
