@@ -45,9 +45,9 @@ main.special-detail1 {
 }
 
 /* Section Top */
-section.top {
-  /* border: 2px solid red; */
-}
+/* section.top {
+  border: 2px solid red;
+} */
 
 header {
   flex: 1;

@@ -20,7 +20,7 @@ const packageList = document.querySelector('.bottom .list-group');
 const choosedPacakge = document.querySelector('.choosed-package');
 
 packageList.addEventListener('click', function (e) {
-  if (e.target.innerText == 'Package 1' || e.target.innerText == 'Package 2' || e.target.innerText == 'Package 3') {
+  if (e.target.innerText == 'Pck 1' || e.target.innerText == 'Pck 2' || e.target.innerText == 'Pck 3') {
     // console.log(e.target.innerText);
     choosedPacakge.innerHTML = `
       ${e.target.innerText} <i onclick="closePayment()" class="fas fa-times-circle"></i>
