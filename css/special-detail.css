@@ -199,3 +199,92 @@ section.bottom {
   color: var(--color1);
   font-weight: bold;
 }
+
+/* Footer */
+footer {
+  /* margin-top: 5rem; */
+  padding-bottom: 4rem;
+  border: 1px solid #333;
+}
+
+footer h5 {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+footer .top-about,
+footer .top-sosmed {
+  color: white;
+}
+
+footer .list-container {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+footer .list-container p {
+  font-size: 0.8rem;
+  margin-right: 1rem;
+  color: #bbb;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+footer .list-container p:hover {
+  color: white;
+}
+
+footer .top-sosmed i {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+footer .top-sosmed a {
+  text-decoration: none;
+  color: #bbb;
+}
+
+footer .top-sosmed a:hover {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  footer h5 {
+    font-size: 1.5rem;
+    text-align: start;
+  }
+  footer .top .container {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer .list-container {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  footer .list-container p {
+    font-size: 1rem;
+  }
+}
+
+/* footer bottom */
+footer .bottom {
+  border-top: 1px solid gray;
+  margin-top: 1rem;
+}
+
+footer .bottom p {
+  color: white;
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  footer .bottom p {
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+  }
+}
